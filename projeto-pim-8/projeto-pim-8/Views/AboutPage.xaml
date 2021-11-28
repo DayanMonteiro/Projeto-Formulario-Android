@@ -1,0 +1,102 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="projeto_pim_8.Views.AboutPage"
+             xmlns:vm="clr-namespace:projeto_pim_8.ViewModels"
+             Title="{Binding Title}">
+    
+    <ContentPage.BindingContext>
+        <vm:AboutViewModel />
+    </ContentPage.BindingContext>
+    
+    <ContentPage.Resources>
+
+        <Style x:Key="ValidationMessage" TargetType="Label">
+            <Setter Property="FontSize" Value="Micro"/>
+            <Setter Property="FontAttributes" Value="Italic"/>
+        </Style>
+
+        <ResourceDictionary>
+            <Color x:Key="Accent">#96d1ff</Color>
+        </ResourceDictionary>
+    </ContentPage.Resources>
+    
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="*" />
+        </Grid.RowDefinitions>
+        <StackLayout BackgroundColor="{StaticResource Accent}" VerticalOptions="FillAndExpand" HorizontalOptions="Fill">
+            <StackLayout Orientation="Horizontal" HorizontalOptions="Center" VerticalOptions="Center">
+                <ContentView Padding="0,40,0,40" VerticalOptions="FillAndExpand">
+                    <Image Source="xamarin_logo.png" VerticalOptions="Center" HeightRequest="64" />
+                </ContentView>
+            </StackLayout>
+        </StackLayout>
+        <ScrollView Grid.Row="1">
+            <StackLayout Orientation="Vertical" Padding="30,24,30,24" Spacing="10">
+                <Label Text="Formulário de Cadastro" FontSize="Title"/>
+
+                <StackLayout Margin="10">
+                    <Label Text="Dados Pessoais" FontSize="Large" />
+                    <Label Text="Nome"/>
+                    <Entry x:Name="Nome" />
+                    <Label x:Name="NomeMsg" Style="{StaticResource ValidationMessage}" Text="O campo nome é obrigatório."/>
+
+                    <Label Text="Telefone fixo"/>
+                    <Entry x:Name="Phone" />
+                    <Label x:Name="PhoneMsg" Style="{StaticResource ValidationMessage}" Text="Informe um telefone fixo."/>
+
+                    <Label Text="Telefone Celular"/>
+                    <Entry x:Name="CellPhone" />
+                    <Label x:Name="CellPhoneMsg" Style="{StaticResource ValidationMessage}" Text="Informe o numero do seu celular."/>
+
+
+                    <Label Text="Endereço" FontSize="Large" />
+                    
+                    
+                    <Label Text="Logradouro"/>
+                    <Entry x:Name="Street"/>
+                    <Label x:Name="StreetMsg" Style="{StaticResource ValidationMessage}" Text="Digite sua rua, av, estrada, etc..."/>
+
+                    <Label Text="Numero"/>
+                    <Entry x:Name="Number"/>
+                    <Label x:Name="NumberMsg" Style="{StaticResource ValidationMessage}" Text="Digite o número da sua residência."/>
+
+                    <Label Text="Complemento"/>
+                    <Entry x:Name="Complement"/>
+                    <Label x:Name="ComplementMsg" Style="{StaticResource ValidationMessage}" Text="Digite algum complemento caso necessário."/>
+
+                    <Label Text="CEP"/>
+                    <Entry x:Name="PostalCode"/>
+                    <Label x:Name="PostalCodeMsg" Style="{StaticResource ValidationMessage}" Text="Digite seu cep."/>
+
+                    <Label Text="Bairro"/>
+                    <Entry x:Name="District"/>
+                    <Label x:Name="DistrictMsg" Style="{StaticResource ValidationMessage}" Text="Digite seu bairro."/>
+
+                    <Label Text="Cidade"/>
+                    <Entry x:Name="City"/>
+                    <Label x:Name="CityMsg" Style="{StaticResource ValidationMessage}" Text="Digite sua cidade."/>
+
+                    <Label Text="Estado"/>
+                    <Entry x:Name="State"/>
+                    <Label x:Name="StateMsg" Style="{StaticResource ValidationMessage}" Text="Digite seu estado, ex: RJ."/>
+
+                    <Button Text="Enviar" VerticalOptions="EndAndExpand" />
+                </StackLayout>
+
+
+
+
+
+        
+            </StackLayout>
+            
+        </ScrollView>
+    </Grid>
+    
+    
+
+</ContentPage>
