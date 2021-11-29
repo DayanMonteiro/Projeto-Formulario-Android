@@ -9,7 +9,7 @@ namespace projeto_pim_8.ViewModels
     {
         public AboutViewModel()
         {
-            Title = "About";
+            Title = "Formulário";
             OpenWebCommand = new Command(async () => await Browser.OpenAsync("https://aka.ms/xamarin-quickstart"));
         }
 

@@ -37,46 +37,52 @@
 
                 <StackLayout Margin="10">
                     <Label Text="Dados Pessoais" FontSize="Large" />
+
+                      
+
                     <Label Text="Nome"/>
                     <Entry x:Name="Nome" />
                     <Label x:Name="NomeMsg" Style="{StaticResource ValidationMessage}" Text="O campo nome é obrigatório."/>
 
-                    <Label Text="Telefone fixo"/>
+                    <Label Text="CPF"/>
+                    <Entry x:Name="CPF" />
+                    <Label x:Name="CPFMsg" Style="{StaticResource ValidationMessage}" Text="O campo nome é obrigatório."/>
+
+                    <Label Text="Tipo deTelefone "/>
                     <Entry x:Name="Phone" />
-                    <Label x:Name="PhoneMsg" Style="{StaticResource ValidationMessage}" Text="Informe um telefone fixo."/>
+                    <Label x:Name="CellPhoneMsg" Style="{StaticResource ValidationMessage}" Text=""/>
 
-                    <Label Text="Telefone Celular"/>
-                    <Entry x:Name="CellPhone" />
-                    <Label x:Name="CellPhoneMsg" Style="{StaticResource ValidationMessage}" Text="Informe o numero do seu celular."/>
-
+                    <Label Text="Numéro de telefone com o DDD"/>
+                    <Entry x:Name="DDD" />
+                    <Label x:Name="DDDMsg" Style="{StaticResource ValidationMessage}" Text="Informe o numero do seu telefone com DDD"/>
+                         
 
                     <Label Text="Endereço" FontSize="Large" />
-                    
-                    
+
                     <Label Text="Logradouro"/>
                     <Entry x:Name="Street"/>
                     <Label x:Name="StreetMsg" Style="{StaticResource ValidationMessage}" Text="Digite sua rua, av, estrada, etc..."/>
-
+                    
                     <Label Text="Numero"/>
                     <Entry x:Name="Number"/>
                     <Label x:Name="NumberMsg" Style="{StaticResource ValidationMessage}" Text="Digite o número da sua residência."/>
-
+                    
                     <Label Text="Complemento"/>
                     <Entry x:Name="Complement"/>
-                    <Label x:Name="ComplementMsg" Style="{StaticResource ValidationMessage}" Text="Digite algum complemento caso necessário."/>
-
+                    <Label x:Name="ComplementMsg" Style="{StaticResource ValidationMessage}" Text="Digite complemento caso necessário. Ex: bloco A casa2, fundos etc..."/>
+                    
                     <Label Text="CEP"/>
                     <Entry x:Name="PostalCode"/>
-                    <Label x:Name="PostalCodeMsg" Style="{StaticResource ValidationMessage}" Text="Digite seu cep."/>
-
+                    <Label x:Name="PostalCodeMsg" Style="{StaticResource ValidationMessage}" Text="Digite seu cep 00.000.000"/>
+                    
                     <Label Text="Bairro"/>
                     <Entry x:Name="District"/>
                     <Label x:Name="DistrictMsg" Style="{StaticResource ValidationMessage}" Text="Digite seu bairro."/>
-
+                    
                     <Label Text="Cidade"/>
                     <Entry x:Name="City"/>
                     <Label x:Name="CityMsg" Style="{StaticResource ValidationMessage}" Text="Digite sua cidade."/>
-
+                    
                     <Label Text="Estado"/>
                     <Entry x:Name="State"/>
                     <Label x:Name="StateMsg" Style="{StaticResource ValidationMessage}" Text="Digite seu estado, ex: RJ."/>
@@ -84,16 +90,8 @@
                     <Button Text="Enviar" VerticalOptions="EndAndExpand" />
                 </StackLayout>
 
-
-
-
-
-        
             </StackLayout>
-            
         </ScrollView>
     </Grid>
-    
-    
-
+ 
 </ContentPage>
